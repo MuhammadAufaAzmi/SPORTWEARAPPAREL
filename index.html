@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPORTWEAR.ID | Premium Performance</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --dark-bg: #0d0d0d;
+        --card-bg: #ffffff;
+        --accent: #ff512f;
+        --accent-2: #dd2476;
+        --text-gray: #999;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: var(--dark-bg);
+        color: white;
+        scroll-behavior: smooth;
+      }
+
+      /* HEADER & NAVIGATION */
+      header {
+        padding: 40px 10%;
+        text-align: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+      }
+
+      header h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        margin: 0;
+        letter-spacing: 4px;
+        background: linear-gradient(to right, #fff, #888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      nav {
+        margin-top: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        opacity: 0.7;
+      }
+
+      nav a:hover {
+        opacity: 1;
+        color: var(--accent);
+      }
+
+      /* SECTION GENERAL */
+      .section {
+        padding: 80px 10%;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      /* ABOUT SECTION */
+      .about-section {
+        background: #fff;
+        color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        padding: 100px 10%;
+      }
+
+      .about-image {
+        flex: 1;
+        position: relative;
+      }
+      .about-image img {
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 20px 20px 0px var(--dark-bg);
+      }
+
+      .about-content {
+        flex: 1;
+      }
+      .about-content h2 {
+        text-align: left;
+        margin-bottom: 20px;
+        color: #000;
+      }
+      .about-content p {
+        line-height: 1.8;
+        font-size: 1.1rem;
+        color: #444;
+      }
+
+      /* PRODUCT CARDS */
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        color: #000;
+        border-radius: 0px; /* Siku tajam lebih terlihat profesional/luxury */
+        padding: 20px;
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(255, 81, 47, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .price {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--dark-bg);
+        margin: 15px 0;
+      }
+
+      button {
+        background: #000;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: var(--accent);
+      }
+
+      /* FOOTER PROFESSIONAL */
+      footer {
+        background: #050505;
+        padding: 80px 10% 40px;
+        border-top: 1px solid #222;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+
+      .footer-col h4 {
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-col ul li {
+        margin-bottom: 12px;
+      }
+
+      .footer-col ul li a {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .footer-col ul li a:hover {
+        color: var(--accent);
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        padding-top: 30px;
+        border-top: 1px solid #1a1a1a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #555;
+        font-size: 13px;
+      }
+
+      @media (max-width: 768px) {
+        .about-section {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-content h2 {
+          text-align: center;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="home">SPORTWEAR.ID</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#harga">Harga</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+    </header>
+
+    <section class="about-section" id="tentang">
+      <div class="about-image">
+        <img
+          src="c:\Users\Budiman\Downloads\logo sport.jpg"
+          alt="Sportwear ID Concept"
+        />
+      </div>
+      <div class="about-content">
+        <h2>THE DARK APPAREL</h2>
+        <p>
+          Kami mendefinisikan ulang pakaian olahraga dengan sentuhan
+          <strong>Dark Aesthetic</strong> dan <strong>High Performance</strong>.
+          Setiap jahitan dirancang untuk menunjang performa maksimal di gym
+          tanpa mengorbankan gaya <em>elegant-dark</em> yang berani.
+        </p>
+        <ul style="padding: 0; list-style: none; margin-top: 20px">
+          <li>✔ Premium Oversized Fit</li>
+          <li>✔ Dark-Emo Minimalist Design</li>
+          <li>✔ Sport Wear ID Original Font</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="harga">
+      <h2>PREMIUM SELECTION</h2>
+      <div class="products">
+        <div class="card">
+          <img
+            src="c:\Users\Budiman\Downloads\Gemini_Generated_Image_8ziaal8ziaal8zia.png"
+            alt="Kaos"
+          />
+          <h3>SPORT FIT T-SHIRT</h3>
+          <p class="price">Rp120.000</p>
+          <button>Add To Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="c:\Users\Budiman\Downloads\Gemini_Generated_Image_7c2h407c2h407c2h.png"
+            alt="Training"
+          />
+          <h3>BAGGY TRAINING PANTS</h3>
+          <p class="price">Rp150.000</p>
+          <button>Add To Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="c:\Users\Budiman\Downloads\Gemini_Generated_Image_1gkflq1gkflq1gkf.png"
+            alt="SET BUNDLE"
+          />
+          <h3>SPORTWEAR.ID SET</h3>
+          <p class="price">250.000</p>
+          <button>Add To Cart</button>
+        </div>
+        <div class="card">
+          <img
+            src="c:\Users\Budiman\Downloads\Gemini_Generated_Image_8oft7w8oft7w8oft.png"
+            alt="Jaket"
+          />
+          <h3>TRAINING JACKET</h3>
+          <p class="price">250.000</p>
+          <button>Beli</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>SPORTWEAR.ID</h4>
+          <p style="color: #666; font-size: 14px; line-height: 1.6">
+            Pioneer pakaian gym dengan konsep Dark Aesthetic di Indonesia.
+            Membangun rasa percaya diri melalui desain yang berani.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Hoodies</a></li>
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 SPORTWEAR.ID. MUHAMMAD AUFA AZMI-231011402983.</p>
+        <p>Digital Entrepreneurship Project</p>
+      </div>
+    </footer>
+  </body>
+</html>
